@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft versions</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 400px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    .version-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .version-link {
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    .version-link:hover {
+        color: #0066cc;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minecraft versions</h1>
+        <div class="version-links">
+            <span class="version-link" onclick="redirectToVersion('1.8.8')">1.8.8 (Latest Version)</span>
+            <span class="version-link" onclick="redirectToVersion('1.5.2')">1.5.2</span>
+        </div>
+    </div>
+
+    <script>
+        function redirectToVersion(version) {
+            window.location.href = `redirect.php?version=${version}`;
+        }
+    </script>
+</body>
+</html>
